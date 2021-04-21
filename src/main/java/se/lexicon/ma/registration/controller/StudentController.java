@@ -60,7 +60,7 @@ public class StudentController {
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
-    @PutMapping("/")
+    @PutMapping("/") //only one request with put mapping
     public ResponseEntity<Student> update(@RequestBody Student student){
         Student result = studentRepository.save(student);
         if (result.isStatus())
